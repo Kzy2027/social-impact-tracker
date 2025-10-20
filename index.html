@@ -4,23 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Social Impact Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
   <header>
-    <h1>Social Impact Tracker</h1>
-    <p>Tracking climate change through CO₂ levels</p>
+    <h1>🌍 Social Impact Tracker</h1>
+    <nav>
+      <ul>
+        <li><a href="#tracker">Tracker</a></li>
+        <li><a href="#about">About</a></li>
+        <li><button id="toggle-theme">🌓</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="chart-section">
-    <canvas id="co2Chart"></canvas>
-  </section>
+  <main>
+    <section id="tracker">
+      <h2>Track Your Impact</h2>
+      <form id="impact-form">
+        <label>CO₂ Saved (kg): <input type="number" id="co2" required /></label>
+        <label>Hours Volunteered: <input type="number" id="hours" required /></label>
+        <label>Donations Made ($): <input type="number" id="donations" required /></label>
+        <button type="submit">Log Activity</button>
+      </form>
+      <div id="summary"></div>
+      <canvas id="impactChart"></canvas>
+    </section>
+
+    <section id="about">
+      <h2>Why It Matters</h2>
+      <p>Every action counts. Track your contributions and see how you're helping the planet.</p>
+    </section>
+  </main>
 
   <footer>
-    <p>Created by [Your Name] | Data from NASA</p>
+    <p>Made with ❤️ by Kehkashan</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
+
