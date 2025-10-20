@@ -3,94 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Social Media Impact Tracker</title>
-  <link rel="stylesheet" href="styles/style.css" />
+  <title>Custom Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>📱 Social Media Impact Tracker</h1>
-    <nav>
-      <ul>
-        <li><a href="#tracker">Tracker</a></li>
-        <li><a href="#detox">Digital Detox</a></li>
-        <li><a href="#blog">Eco Feed</a></li>
-        <li><a href="#stories">Impact Stories</a></li>
-        <li><a href="#score">Eco Score</a></li>
-        <li>
-          <select id="theme-selector">
-            <option value="pink">🌸 Baby Pink</option>
-            <option value="dark">🌑 Dark Mode</option>
-            <option value="grass">🌿 Grass Field</option>
-          </select>
-        </li>
-      </ul>
-    </nav>
+    <h1>My Organizer</h1>
+    <select id="themeSelector">
+      <option value="default">Dark</option>
+      <option value="baby">Baby Pink</option>
+      <option value="grass">Grass Field</option>
+    </select>
   </header>
 
+  <nav>
+    <button class="tabButton" onclick="openTab('overview')">Overview</button>
+    <button class="tabButton" onclick="openTab('tasks')">Tasks</button>
+    <button class="tabButton" onclick="openTab('calendar')">Calendar</button>
+    <button class="tabButton" onclick="openTab('notes')">Notes</button>
+  </nav>
+
   <main>
-    <!-- Tracker Section -->
-    <section id="tracker">
-      <h2>Track Your Usage</h2>
-      <form id="usage-form">
-        <label>Hours on Social Media: <input type="number" id="hours" required /></label>
-        <label>Estimated Data Used (GB): <input type="number" id="data" required /></label>
-        <label>Info Quality (1–5): <input type="number" id="quality" min="1" max="5" required /></label>
-        <label>Mood After Use:
-          <select id="mood">
-            <option value="happy">😊 Happy</option>
-            <option value="neutral">😐 Neutral</option>
-            <option value="sad">😢 Sad</option>
-            <option value="anxious">😰 Anxious</option>
-          </select>
-        </label>
-        <button type="submit">Calculate Impact</button>
-      </form>
-      <div id="result"></div>
-    </section>
-
-    <!-- Digital Detox Section -->
-    <section id="detox">
-      <h2>Digital Detox</h2>
-      <label>Choose Detox Duration (minutes): <input type="number" id="detox-time" /></label>
-      <button id="start-detox">Start Detox</button>
-      <div id="detox-message"></div>
-    </section>
-
-    <!-- Eco Feed Blog -->
-    <section id="blog">
-      <h2>Eco Feed</h2>
-      <article>
-        <h3>📉 Streaming vs. CO₂</h3>
-        <p>Streaming HD video for 1 hour can emit up to 55g of CO₂. Try downloading or switching to lower quality!</p>
-      </article>
-      <article>
-        <h3>🧠 TikTok & Your Brain</h3>
-        <p>Short-form content rewires attention spans. Balance your feed with long-form learning!</p>
-      </article>
-    </section>
-
-    <!-- Impact Stories Wall -->
-    <section id="stories">
-      <h2>Impact Stories</h2>
-      <form id="story-form">
-        <label>Your Story: <textarea id="story-text" required></textarea></label>
-        <button type="submit">Share</button>
-      </form>
-      <div id="story-wall"></div>
-    </section>
-
-    <!-- Eco Score Section -->
-    <section id="score">
-      <h2>Your Eco Score</h2>
-      <button id="calculate-score">Get My Score</button>
-      <div id="score-result"></div>
-    </section>
+    <section id="overview" class="tabContent">Welcome to your dashboard!</section>
+    <section id="tasks" class="tabContent" style="display:none;">Task manager goes here.</section>
+    <section id="calendar" class="tabContent" style="display:none;">Calendar view goes here.</section>
+    <section id="notes" class="tabContent" style="display:none;">Notes section goes here.</section>
   </main>
 
-  <footer>
-    <p>Made with 💚 by Kzy</p>
-  </footer>
-
-  <script src="scripts/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
